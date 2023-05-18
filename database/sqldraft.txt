@@ -1,0 +1,25 @@
+CREATE DATABASE webnoteapp_db;
+
+CREATE table webnoteapp_db.applogin (
+ id_applogin INT AUTO_INCREMENT NOT NULL,
+ pass VARCHAR(255) NOT NULL,
+ PRIMARY KEY(id_applogin)
+)ENGINE=INNODB;
+
+INSERT INTO webnoteapp_db.applogin (pass) VALUES ('$2y$10$5JWylt51jMdUbO6gYrGi8eE5rraMi/HdffESTMuAF1o7Ga0pdzu7O');
+
+CREATE TABLE webnoteapp_db.note (
+	id_note INT AUTO_INCREMENT NOT NULL,
+	judul_note VARCHAR(30) NOT NULL,
+ 	html_note TEXT,
+ 	PRIMARY KEY (id_note)
+) ENGINE=INNODB;
+
+CREATE TABLE webnoteapp_db.draft_story (
+	id_story INT AUTO_INCREMENT NOT NULL,
+	series_story VARCHAR(30),
+	judul_story VARCHAR(30) NOT NULL,
+ 	html_story TEXT,
+ 	PRIMARY KEY (id_story)
+) ENGINE=INNODB;
+
